@@ -1,9 +1,7 @@
 # Responsive-Default-for-Zen-Cart-1.5.6
-This HTML5 template is mobile friendly and uses Responsive CSS to allow sharing of a single template across multiple device types.  It uses PHP Mobile 
-Detect to serve up the optimized layout based on device. It allows the designer to implement device-specific php, jquery, javascript or ajax.
+This template is mobile friendly and uses Responsive CSS to allow sharing of a single template across multiple device types.  It uses PHP Mobile Detect to serve up the optimized layout based on device. It allows the designer to implement device-specific php, jquery, javascript or ajax.
 
-Allot of man hours went into not just this project but the several before it to make it what it is today. <b>Support this Project</b> enables me to spend 
-time on this project to further provide ongoing updates, features and requests.
+<b>Donations</b> enable me to spend time on this project to further provide ongoing updates, features and requests.
 <br />
 <br />
 Keep this project FREE, any size $$Donation$$ by the community is greatly appreciated. 
@@ -35,33 +33,7 @@ Rename the <b>YOUR_ADMIN_FOLDER</b> to your actual admin folders name.<br /><br 
 <b>DO NOT</b> rename the responsive_default directories.<br /><br />
 
 <b>Using as a template conversion</b><br />
-<b>RENAME</b> the responsive_default directories to your template override directory name.<br /><br />
-
-```
-ADMIN_FILES/YOUR_ADMIN_FOLDER/layout_controller.php
-CATALOG_FILES/includes/modules/pages/specials/main_template_vars.php
-CATALOG_FILES/includes/modules/responsive_default/additional_images.php
-CATALOG_FILES/includes/modules/responsive_default/also_purchased_products.php
-CATALOG_FILES/includes/modules/responsive_default/category_row.php
-CATALOG_FILES/includes/modules/responsive_default/column_left.php
-CATALOG_FILES/includes/modules/responsive_default/featured_products.php
-CATALOG_FILES/includes/modules/responsive_default/new_products.php
-CATALOG_FILES/includes/modules/responsive_default/specials_index.php
-CATALOG_FILES/includes/templates/responsive_default/common/html_header.php
-CATALOG_FILES/includes/templates/responsive_default/common/tpl_box_default_left.php
-CATALOG_FILES/includes/templates/responsive_default/common/tpl_box_default_right.php
-CATALOG_FILES/includes/templates/responsive_default/common/tpl_columnar_display.php
-CATALOG_FILES/includes/templates/responsive_default/common/tpl_main_page.php
-CATALOG_FILES/includes/templates/responsive_default/css/CSS_read_me.txt
-CATALOG_FILES/includes/templates/responsive_default/css/stylesheet.css
-CATALOG_FILES/includes/templates/responsive_default/css/responsive_default.css
-CATALOG_FILES/includes/templates/responsive_default/css/responsive_mobile.css
-CATALOG_FILES/includes/templates/responsive_default/css/responsive_tablet.css
-CATALOG_FILES/includes/templates/responsive_default/jscript/jquery.matchHeight.js
-CATALOG_FILES/includes/templates/responsive_default/jscript/jscript_matchHeight-min.js
-CATALOG_FILES/includes/templates/responsive_default/jscript/jscript_responsive_framework.php
-CATALOG_FILES/includes/templates/responsive_default/template_info.php
-```
+<b>RENAME</b> the zca_diy_tpl_default directories to your template override directory name.<br /><br />
 
 4. If you already have the above files in your template override directory, do not upload these files. Make the following file code merges to your existing files. Be sure to use a Plain Text Editor when editing these files.<br /><br />
 
@@ -102,7 +74,7 @@ I use and will provide basic instructions using FTP with Filezilla.<br /><br />
 
 6. Scroll to the bottom and Click the "reset" button.<br /><br />
 
-<b>Note:</b> You will now see 3 new columns (Desktop Status, Tablet Status and Mobile Status), this is where you turn these side-boxes off for specific devices.<br /><br />
+<b>Note:</b> You will now see 2 new columns (Tablet Status and Mobile Status), this is where you turn these side-boxes off for specific devices.<br /><br />
 
 7. Hover over Configuration and Click (Layout Settings).<br />
 
