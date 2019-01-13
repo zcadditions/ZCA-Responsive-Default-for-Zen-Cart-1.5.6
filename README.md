@@ -1,6 +1,10 @@
 # Responsive-Default-for-Zen-Cart-1.5.6
 This template is mobile friendly and uses Responsive CSS to allow sharing of a single template across multiple device types.  It uses PHP Mobile Detect to serve up the optimized layout based on device. It allows the designer to implement device-specific php, jquery, javascript or ajax.
 
+# New in 1.5.6
+- Ability to control products per row for specific devices
+- New Mobile Full Width Features
+
 <b>Donations</b> enable me to spend time on this project to further provide ongoing updates, features and requests.
 <br />
 <br />
@@ -80,7 +84,7 @@ I use and will provide basic instructions using FTP with Filezilla.<br /><br />
 
 <b>Note:</b> You will now see 4 new configuration.<br /><br />
 
-<b>New Configuration(s)</b>
+<b>New Configuration(s) > Layout Settings</b>
 <br />
 
 
@@ -90,6 +94,46 @@ I use and will provide basic instructions using FTP with Filezilla.<br /><br />
 | Responsive Center Column Width | 8 | Set Width of Right Column, Default is 8, Total columns 12. Responsive Left, Center & Right Column Width must = 12 |
 | Responsive Right Column Width | 2 | Set Width of Right Column, Default is 2, Total columns 12. Responsive Left, Center & Right Column Width must = 12 |
 | Responsive Mobile Full Site Version Width | 980px | Set Width of Responsive Mobile Full Site Version, Default is 980px, To give mobile users same experience, this width should be the same max-width for the #mainWrapper selector in your stylesheet.css file |
+
+<br />
+<b>New Configuration(s) > Images</b>
+<br />
+
+| Title         | Value         | Description         |
+| ------------- |:-------------:| -------------------:|
+| Product Info - Number of Additional Images per Row (Mobile) | 1 | Product Info - Enter the number of additional images to display per row on (Mobile Devices). Default = 1 |
+| Product Info - Number of Additional Images per Row (Tablet)| 2 | Product Info - Enter the number of additional images to display per row on (Tablet Devices). Default = 2 |
+
+<br />
+<b>New Configuration(s) > Product Info</b>
+<br />
+
+| Title         | Value         | Description         |
+| ------------- |:-------------:| -------------------:|
+| Also Purchased Products Columns per Row (Mobile) | 1 | Also Purchased Products Columns per row on (Mobile Devices). Default = 1 |
+| Also Purchased Products Columns per Row (Tablet)| 2 | Also Purchased Products Columns per row on (Tablet Devices). Default = 2 |
+
+<br />
+<b>New Configuration(s) > Maximum Values</b>
+<br />
+
+| Title         | Value         | Description         |
+| ------------- |:-------------:| -------------------:|
+| Categories To List Per Row (Mobile) | 1 | How many categories to list per row on (Mobile Devices). Default = 1 |
+| Categories To List Per Row (Tablet) | 2 | How many categories to list per row on (Tablet Devices). Default = 2 |
+
+<br />
+<b>New Configuration(s) > Index Listing</b>
+<br />
+
+| Title         | Value         | Description         |
+| ------------- |:-------------:| -------------------:|
+| Featured Products Columns per Row (Mobile) | 1 | Featured Products Columns per row on (Mobile Devices). Default = 1 |
+| Featured Products Columns per Row (Tablet) | 2 | Featured Products Columns per row on (Tablet Devices). Default = 2 |
+| New Products Columns per Row (Mobile) | 1 | New Products Columns per row on (Mobile Devices). Default = 1 |
+| New Products Columns per Row (Tablet) | 2 | New Products Columns per row on (Tablet Devices). Default = 2 |
+| Special Products Columns per Row (Mobile) | 1 | Special Products Columns per row on (Mobile Devices). Default = 1 |
+| Special Products Columns per Row (Tablet) | 2 | Special Products Columns per row on (Tablet Devices). Default = 2 |
 
 <br />
 
