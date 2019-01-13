@@ -1,0 +1,51 @@
+ALTER TABLE layout_boxes DROP COLUMN show_box_min_width;
+ALTER TABLE layout_boxes DROP COLUMN layout_box_status_mobile;
+ALTER TABLE layout_boxes DROP COLUMN layout_box_status_tablet;
+ALTER TABLE layout_boxes ADD layout_box_status_mobile TINYINT( 1 ) NOT NULL DEFAULT '1' AFTER layout_box_status_single;
+ALTER TABLE layout_boxes ADD layout_box_status_tablet TINYINT( 1 ) NOT NULL DEFAULT '1' AFTER layout_box_status_mobile;
+
+
+UPDATE configuration SET configuration_description = 'Width of the Left Column Boxes<br />px may be included<br />Default = 150px<br /><b>This configuration has no affect with the ZCA Responsive Components<b/>' WHERE configuration_key = 'BOX_WIDTH_LEFT';
+UPDATE configuration SET configuration_description = 'Width of the Right Column Boxes<br />px may be included<br />Default = 150px<br /><b>This configuration has no affect with the ZCA Responsive Components<b/>' WHERE configuration_key = 'BOX_WIDTH_RIGHT';
+
+UPDATE configuration SET configuration_description = 'Width of the Left Column<br />px may be included<br />Default = 150px<br /><br /><b>This configuration has no affect with the ZCA Responsive Components<b/>' WHERE configuration_key = 'COLUMN_WIDTH_LEFT';
+UPDATE configuration SET configuration_description = 'Width of the Right Column<br />px may be included<br />Default = 150px<br /><b>This configuration has no affect with the ZCA Responsive Components<b/>' WHERE configuration_key = 'COLUMN_WIDTH_RIGHT';
+
+INSERT INTO configuration (configuration_id, configuration_title, configuration_key, configuration_value, configuration_description, configuration_group_id, sort_order, date_added, use_function, set_function) VALUES 
+(NULL, 'Responsive Left Column Width', 'SET_COLUMN_LEFT_LAYOUT', '2', 'Set Width of Left Column<br />Default is <b>2</b>, Total columns <b>12</b>.<br />Responsive Left, Center & Right Column Width must = 12', 19, 200, NOW(), NULL, 'zen_cfg_select_option(array(\'0\', \'1\', \'2\', \'3\', \'4\', \'5\', \'6\', \'7\', \'8\', \'9\', \'10\', \'11\', \'12\'),'),
+(NULL, 'Responsive Center Column Width', 'SET_COLUMN_CENTER_LAYOUT', '8', 'Set Width of Right Column<br />Default is <b>8</b>, Total columns <b>12</b>.<br />Responsive Left, Center & Right Column Width must = 12', 19, 201, NOW(), NULL, 'zen_cfg_select_option(array(\'0\', \'1\', \'2\', \'3\', \'4\', \'5\', \'6\', \'7\', \'8\', \'9\', \'10\', \'11\', \'12\'),'),
+(NULL, 'Responsive Right Column Width', 'SET_COLUMN_RIGHT_LAYOUT', '2', 'Set Width of Right Column<br />Default is <b>2</b>, Total columns <b>12</b>.<br />Responsive Left, Center & Right Column Width must = 12', 19, 202, NOW(), NULL, 'zen_cfg_select_option(array(\'0\', \'1\', \'2\', \'3\', \'4\', \'5\', \'6\', \'7\', \'8\', \'9\', \'10\', \'11\', \'12\'),'),
+(NULL, 'Responsive Mobile Full Site Version Width', 'SET_MAX_WIDTH', '980px', 'Set Width of Responsive Mobile Full Site Version<br />Default is <b>980px</b>, To give mobile users same experience, this width should be the same max-width for the #mainWrapper selector in your stylesheet.css file', 19, 203, NOW(), NULL , NULL);
+
+UPDATE configuration SET configuration_title = 'Product Info - Number of Additional Images per Row (Desktop)' WHERE configuration_key = 'IMAGES_AUTO_ADDED';
+UPDATE configuration SET configuration_title = 'Also Purchased Products Columns per Row (Desktop)' WHERE configuration_key = 'SHOW_PRODUCT_INFO_COLUMNS_ALSO_PURCHASED_PRODUCTS';
+UPDATE configuration SET configuration_title = 'Categories To List Per Row (Desktop)' WHERE configuration_key = 'MAX_DISPLAY_CATEGORIES_PER_ROW';
+UPDATE configuration SET configuration_title = 'Featured Products Columns per Row (Desktop)' WHERE configuration_key = 'SHOW_PRODUCT_INFO_COLUMNS_FEATURED_PRODUCTS';
+UPDATE configuration SET configuration_title = 'New Products Columns per Row (Desktop)' WHERE configuration_key = 'SHOW_PRODUCT_INFO_COLUMNS_NEW_PRODUCTS';
+UPDATE configuration SET configuration_title = 'Special Products Columns per Row (Desktop)' WHERE configuration_key = 'SHOW_PRODUCT_INFO_COLUMNS_SPECIALS_PRODUCTS';
+
+INSERT INTO configuration (configuration_id, configuration_title, configuration_key, configuration_value, configuration_description, configuration_group_id, sort_order, date_added, use_function, set_function) VALUES 
+(NULL, 'Product Info - Number of Additional Images per Row (Mobile)', 'IMAGES_AUTO_ADDED_MOBILE', '1', 'Product Info - Enter the number of additional images to display per row on (Mobile Devices). Default = 1', 4, 30, NOW(), NULL, 'zen_cfg_select_option(array(\'0\', \'1\', \'2\', \'3\', \'4\', \'5\', \'6\', \'7\', \'8\', \'9\', \'10\', \'11\', \'12\'),'),
+(NULL, 'Product Info - Number of Additional Images per Row (Tablet)', 'IMAGES_AUTO_ADDED_TABLET', '2', 'Product Info - Enter the number of additional images to display per row on (Tablet Devices). Default = 2', 4, 30, NOW(), NULL, 'zen_cfg_select_option(array(\'0\', \'1\', \'2\', \'3\', \'4\', \'5\', \'6\', \'7\', \'8\', \'9\', \'10\', \'11\', \'12\'),'),
+(NULL, 'Also Purchased Products Columns per Row (Mobile)', 'SHOW_PRODUCT_INFO_COLUMNS_ALSO_PURCHASED_PRODUCTS_MOBILE', '1', 'Also Purchased Products Columns per row on (Mobile Devices). Default = 1', 18, 72, NOW(), NULL, 'zen_cfg_select_option(array(\'0\', \'1\', \'2\', \'3\', \'4\', \'5\', \'6\', \'7\', \'8\', \'9\', \'10\', \'11\', \'12\'),'),
+(NULL, 'Also Purchased Products Columns per Row (Tablet)', 'SHOW_PRODUCT_INFO_COLUMNS_ALSO_PURCHASED_PRODUCTS_TABLET', '2', 'Also Purchased Products Columns per row on (Tablet Devices). Default = 2', 18, 72, NOW(), NULL, 'zen_cfg_select_option(array(\'0\', \'1\', \'2\', \'3\', \'4\', \'5\', \'6\', \'7\', \'8\', \'9\', \'10\', \'11\', \'12\'),'),
+(NULL, 'Categories To List Per Row (Mobile)', 'MAX_DISPLAY_CATEGORIES_PER_ROW_MOBILE', '1', 'How many categories to list per row on (Mobile Devices). Default = 1', 3, 13, NOW(), NULL, 'zen_cfg_select_option(array(\'0\', \'1\', \'2\', \'3\', \'4\', \'5\', \'6\', \'7\', \'8\', \'9\', \'10\', \'11\', \'12\'),'),
+(NULL, 'Categories To List Per Row (Tablet)', 'MAX_DISPLAY_CATEGORIES_PER_ROW_TABLET', '2', 'How many categories to list per row on (Tablet Devices). Default = 2', 3, 13, NOW(), NULL, 'zen_cfg_select_option(array(\'0\', \'1\', \'2\', \'3\', \'4\', \'5\', \'6\', \'7\', \'8\', \'9\', \'10\', \'11\', \'12\'),'),
+(NULL, 'Featured Products Columns per Row (Mobile)', 'SHOW_PRODUCT_INFO_COLUMNS_FEATURED_PRODUCTS_MOBILE', '1', 'Featured Products Columns per row on (Mobile Devices). Default = 1', 24, 96, NOW(), NULL, 'zen_cfg_select_option(array(\'0\', \'1\', \'2\', \'3\', \'4\', \'5\', \'6\', \'7\', \'8\', \'9\', \'10\', \'11\', \'12\'),'),
+(NULL, 'Featured Products Columns per Row (Tablet)', 'SHOW_PRODUCT_INFO_COLUMNS_FEATURED_PRODUCTS_TABLET', '2', 'Featured Products Columns per row on (Tablet Devices). Default = 2', 24, 96, NOW(), NULL, 'zen_cfg_select_option(array(\'0\', \'1\', \'2\', \'3\', \'4\', \'5\', \'6\', \'7\', \'8\', \'9\', \'10\', \'11\', \'12\'),'),
+(NULL, 'New Products Columns per Row (Mobile)', 'SHOW_PRODUCT_INFO_COLUMNS_NEW_PRODUCTS_MOBILE', '1', 'New Products Columns per row on (Mobile Devices). Default = 1', 24, 95, NOW(), NULL, 'zen_cfg_select_option(array(\'0\', \'1\', \'2\', \'3\', \'4\', \'5\', \'6\', \'7\', \'8\', \'9\', \'10\', \'11\', \'12\'),'),
+(NULL, 'New Products Columns per Row (Tablet)', 'SHOW_PRODUCT_INFO_COLUMNS_NEW_PRODUCTS_TABLET', '2', 'New Products Columns per row on (Tablet Devices). Default = 2', 24, 95, NOW(), NULL, 'zen_cfg_select_option(array(\'0\', \'1\', \'2\', \'3\', \'4\', \'5\', \'6\', \'7\', \'8\', \'9\', \'10\', \'11\', \'12\'),'),
+(NULL, 'Special Products Columns per Row (Mobile)', 'SHOW_PRODUCT_INFO_COLUMNS_SPECIALS_PRODUCTS_MOBILE', '1', 'Special Products Columns per row on (Mobile Devices). Default = 1', 24, 97, NOW(), NULL, 'zen_cfg_select_option(array(\'0\', \'1\', \'2\', \'3\', \'4\', \'5\', \'6\', \'7\', \'8\', \'9\', \'10\', \'11\', \'12\'),'),
+(NULL, 'Special Products Columns per Row (Tablet)', 'SHOW_PRODUCT_INFO_COLUMNS_SPECIALS_PRODUCTS_TABLET', '2', 'Special Products Columns per row on (Tablet Devices). Default = 2', 24, 97, NOW(), NULL, 'zen_cfg_select_option(array(\'0\', \'1\', \'2\', \'3\', \'4\', \'5\', \'6\', \'7\', \'8\', \'9\', \'10\', \'11\', \'12\'),');
+
+
+
+
+
+
+
+
+
+
+
+
