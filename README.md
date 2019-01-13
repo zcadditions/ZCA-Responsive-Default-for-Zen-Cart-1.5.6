@@ -1,4 +1,4 @@
-# Responsive-Default-for-Zen-Cart-1.5.6
+# Responsive-Default-for-Zen-Cart-1.5.6-v1.0.0
 This template is mobile friendly and uses Responsive CSS to allow sharing of a single template across multiple device types.  It uses PHP Mobile Detect to serve up the optimized layout based on device. It allows the designer to implement device-specific php, jquery, javascript or ajax.
 
 # New in 1.5.6
