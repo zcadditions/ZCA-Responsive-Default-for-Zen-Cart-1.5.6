@@ -66,7 +66,7 @@ $installed_boxes = array();
     }
 //-bof-zca_diy_tpl  *** 1 of 10 ***	
     $db->Execute("INSERT INTO " . TABLE_LAYOUT_BOXES . " (layout_template, layout_box_name, layout_box_status, layout_box_location, layout_box_sort_order, layout_box_sort_order_single, layout_box_status_single, layout_box_status_mobile, layout_box_status_tablet)
-                  VALUES ('" . zen_db_input($template_dir) . "', '" . zen_db_input($file) . "', 0, 0, 0, 0, 0)");
+                  VALUES ('" . zen_db_input($template_dir) . "', '" . zen_db_input($file) . "', 0, 0, 0, 0, 0, 0, 0)");
 //-eof-zca_diy_tpl  *** 1 of 10 ***
   }
 }
