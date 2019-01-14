@@ -16,7 +16,7 @@ if (!defined('IS_ADMIN_FLAG')) {
 }
 $column_box_default='tpl_box_default_right.php';
 // Check if there are boxes for the column
-$column_right_display = $db->Execute("select layout_box_name, layout_box_status_mobile, layout_box_status_tablet from " . TABLE_LAYOUT_BOXES . " where layout_box_location = 0 and layout_box_status= '1' and layout_template ='" . $template_dir . "'" . ' order by layout_box_sort_order');
+$column_right_display = $db->Execute("select layout_box_name, layout_box_status_mobile, layout_box_status_tablet from " . TABLE_LAYOUT_BOXES . " where layout_box_location = 1 and layout_box_status= '1' and layout_template ='" . $template_dir . "'" . ' order by layout_box_sort_order');
 // safety row stop
 $box_cnt=0;
 while (!$column_right_display->EOF and $box_cnt < 100) {
